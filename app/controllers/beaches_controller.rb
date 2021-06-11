@@ -5,6 +5,12 @@ class BeachesController < ApplicationController
         render json: beaches
     end
 
+    def show
+        beach = Beach.find_by(name: params[:name], location: params[:location])
+        render json: beach
+    end
+
+
     def create
         Beach.find_by(name: params[:name], location: params[:location]) == nil ?
             Beach.create(name: params[:name], location: params[:location]) && response = {success: "#{params[:name]} in #{params[:location]} has been created."}

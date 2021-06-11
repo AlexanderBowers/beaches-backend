@@ -1,24 +1,17 @@
-# README
+This is the backend for our MLH Surf's Up Hackathon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To better assist you find what you're looking for:
 
-Things you may want to cover:
+You can find CRUD actions under app > controllers
+You can find class methods under app > models
 
-* Ruby version
+Routes are under config > routes
+Routes allow you to see how to respond to specific urls
+    under routes, 'resources' basically means full crud and use the controller methods
+        /beaches would go to beaches#index
+        /beaches/id would give you a specific beach
+        post '/someRoute', to: 'beaches#some_method' means if the route is detected it will go to the beaches model; not controller
 
-* System dependencies
+Under db>migrate you can see the order in which tables are generated for our database
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
