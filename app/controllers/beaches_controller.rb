@@ -9,7 +9,7 @@ class BeachesController < ApplicationController
     end
 
     def show
-        beach = Beach.find_by(name: params[:name], location: params[:location])
+        beach = Beach.find_by(id: params[:id])
         render json: beach
     end
 
