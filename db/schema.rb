@@ -18,34 +18,8 @@ ActiveRecord::Schema.define(version: 2021_06_11_173127) do
   create_table "beaches", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "string"
-    t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.text "image"
   end
 
-  create_table "parties", force: :cascade do |t|
-    t.string "leader"
-    t.string "platform"
-    t.string "game"
-    t.string "activity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "user_parties", force: :cascade do |t|
-    t.string "user_id"
-    t.string "party_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "platforms"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
 end

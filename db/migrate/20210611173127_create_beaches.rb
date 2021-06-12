@@ -3,10 +3,7 @@ class CreateBeaches < ActiveRecord::Migration[6.1]
     create_table :beaches do |t|
       t.string :name
       t.string :location
-      t.string :string
-      t.string :image
-
-      t.timestamps
+      t.text :image
     end
   end
 end
